@@ -34,10 +34,10 @@ namespace API_1.Controllers
 
                 while (rdr.Read())
                 {
-                    output.Add(new BookModels(int.Parse(rdr["isbn"].ToString())),
+                    output.Add(new BookModels(int.Parse(rdr["isbn"].ToString()),
                         rdr["title"].ToString(),
                         int.Parse(rdr["borrower"].ToString()),
-                        int.Parse(rdr["author"].ToString()));
+                        int.Parse(rdr["author"].ToString())));
                     /*output.Add(
                         "{isbn: " + rdr.GetValue(0) +
                         ", title: \"" + rdr.GetValue(1) + "\"" +
